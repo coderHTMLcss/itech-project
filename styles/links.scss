@@ -1,10 +1,15 @@
-.link{
-    color:var(--black-color);
-    transition: var(--transition);
-    font-weight: 700;
+.link {
+  color: var(--black-color);
+  transition: var(--transition);
+  font-weight: 700;
 
-    &:hover, &:active, &:focus{
-        color:var(--violett-color);
-    }
+  &:hover,
+  &:active,
+  &:focus {
+    color: var(--violett-color);
+  }
 }
 
+.link_active {
+  color: var(--violett-color);
+}

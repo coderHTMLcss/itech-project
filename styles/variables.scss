@@ -1,17 +1,16 @@
-    // breakpoints
-    $bigger-mobile: 576px;
-    $tablet-desktop: 768px;
-    $desktop: 1200px;
-    $bigger-desktop: 1400px;
-    
+// breakpoints
+$bigger-mobile: 576px;
+$tablet-desktop: 768px;
+$desktop: 1200px;
+$bigger-desktop: 1400px;
 
-:root{
-    // Font
-    --smaller-font:700 12px 'Inter',sans-serif;
-   
-    // Spacers
-    --gap: 20px;
+:root {
+  // Font
+  --smaller-font: 700 12px "Inter", sans-serif;
 
-    --transition: 0.3s;
-    --size:40px;
+  // Spacers
+  --gap: 20px;
+
+  --transition: 0.3s;
+  --size: 40px;
 }
