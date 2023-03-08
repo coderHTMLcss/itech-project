@@ -22,20 +22,21 @@ header {
     gap: var(--gap);
   }
 
-  .header__logo {
-    width: 150px;
-    height: 35px;
-  }
-
-  .navigation ul {
-    display: flex;
-    gap: calc(var(--gap) * 2);
-    font: var(--smaller-font);
-    text-transform: uppercase;
-  }
-
   .header__buttons {
+    width: 208px;
     display: flex;
     gap: var(--gap);
   }
+}
+
+.logo {
+  width: 150px;
+  height: 35px;
+}
+
+.navigation ul {
+  display: flex;
+  gap: calc(var(--gap) * 2);
+  font: var(--smaller-font);
+  text-transform: uppercase;
 }
