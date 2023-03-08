@@ -1,5 +1,33 @@
 footer {
+  position: relative;
   margin-top: auto;
+  background-color: var(--creame-color);
+
+  .footer__wave {
+    position: absolute;
+    width: 100%;
+    top: -169px;
+    left: -2px;
+    right: 0;
+    height: 269px;
+    background-image: url("./../assets/images/footer_wave.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+
+    animation: wave 2s ease-in-out infinite alternate both;
+  }
+
+  @keyframes wave {
+    0% {
+      transform: rotate(1deg);
+    }
+    100% {
+      transform: rotate(-1deg);
+    }
+  }
+
   .footer__container {
     gap: calc(var(--gap) * 2);
     padding: calc(var(--gap) * 2) 0;
@@ -13,7 +41,7 @@ footer {
   }
 
   .footer__top {
-    gap: var(--gap);
+    gap: calc(var(--gap) * 2);
   }
 
   .footer__center {

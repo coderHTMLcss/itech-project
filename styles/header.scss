@@ -23,9 +23,44 @@ header {
   }
 
   .header__buttons {
+    position: relative;
     width: 208px;
     display: flex;
+    align-items: center;
     gap: var(--gap);
+  }
+
+  .header__lang {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  img {
+    width: 25px;
+    height: 25px;
+    padding-right: var(--gap);
+  }
+
+  .header__lang-buttons {
+    position: absolute;
+
+    top: 50px;
+    right: 0;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--creame-color);
+    border-radius: 20px;
+
+    a {
+      padding: 5px 22px;
+      width: 70%;
+      &:hover {
+        background-color: var(--color-white);
+      }
+    }
   }
 }
 

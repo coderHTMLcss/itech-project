@@ -5,6 +5,7 @@
   padding: 0 var(--gap);
   color: var(--black-color);
   height: var(--size);
+  flex-shrink: 0;
   border: 1px solid var(--color-grey);
   transition: var(--transition);
   border-radius: var(--size);
