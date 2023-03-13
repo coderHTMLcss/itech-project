@@ -52,4 +52,15 @@
   @media (min-width: v.$tablet) {
     --size: 40px;
   }
+
+  &_white {
+    background-color: var(--color-white);
+    color: var(--black-color);
+    height: 20px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+  }
 }
