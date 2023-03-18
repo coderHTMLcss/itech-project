@@ -1,6 +1,13 @@
 .text {
+  &_bold {
+    font-weight: 700;
+  }
+
   &_biggest {
     font: var(--biggest-font);
+  }
+  &_bigger {
+    font: var(--bigger-font);
   }
 
   &_gradient {
@@ -19,6 +26,10 @@
 
   &_purple {
     color: #b5a6f5;
+  }
+
+  &_violett {
+    color: var(--violett-color);
   }
 
   &_emoji {

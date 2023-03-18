@@ -46,3 +46,12 @@ button {
   color: var(--black-color);
   cursor: pointer;
 }
+
+@keyframes bg-rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

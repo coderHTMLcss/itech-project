@@ -20,15 +20,6 @@
     z-index: -1;
 
     animation: bg-rotation 100s linear infinite both;
-
-    @keyframes bg-rotation {
-      0% {
-        transform: rotate(0);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
   }
 
   &__container {
