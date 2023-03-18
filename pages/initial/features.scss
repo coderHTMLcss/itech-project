@@ -1,4 +1,4 @@
-@use "styles/variables" as v;
+@use "styles/variables" as var;
 
 .features {
   $double-gap: calc(var(--gap) * 2);
@@ -41,14 +41,14 @@
     align-items: center;
     gap: $double-gap;
 
-    @media (min-width: v.$bigger-tablet) {
+    @media (min-width: var.$bigger-tablet) {
       justify-content: space-around;
       flex-direction: row;
     }
   }
 
   &__item {
-    @media (min-width: v.$bigger-tablet) {
+    @media (min-width: var.$bigger-tablet) {
       display: flex;
       flex-direction: column;
     }

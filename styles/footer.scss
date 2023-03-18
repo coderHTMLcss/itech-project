@@ -1,4 +1,4 @@
-@use "variables" as v;
+@use "variables" as var;
 
 footer {
   position: relative;
@@ -30,7 +30,7 @@ footer {
     padding: var(--gap) 0;
     border-bottom: 2px solid var(--color-grey);
 
-    @media (min-width: v.$tablet) {
+    @media (min-width: var.$tablet) {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
@@ -46,11 +46,11 @@ footer {
       align-self: start;
     }
 
-    @media (min-width: v.$tablet) {
+    @media (min-width: var.$tablet) {
       justify-content: space-around;
     }
 
-    @media (min-width: v.$desktop) {
+    @media (min-width: var.$desktop) {
       li {
         width: auto;
       }
@@ -63,7 +63,7 @@ footer {
     gap: var(--gap);
     margin: calc(var(--gap) * 2) 0;
 
-    @media (min-width: v.$bigger-mobile) {
+    @media (min-width: var.$bigger-mobile) {
       flex-direction: row;
     }
   }

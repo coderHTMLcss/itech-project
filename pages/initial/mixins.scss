@@ -1,0 +1,28 @@
+@use "styles/variables" as var;
+@use "styles/mixins" as mixins;
+
+@mixin bg-rotation($space: 0, $image) {
+  position: absolute;
+  top: $space;
+  right: $space;
+  left: $space;
+  bottom: $space;
+  @include mixins.background-image($image);
+  overflow: clip;
+  z-index: -1;
+
+  animation: bg-rotation 100s linear infinite both;
+}
+
+@mixin half-container-image($image) {
+  height: 390px;
+  @include mixins.background-image($image: $image, $size: contain);
+
+  @media (min-width: var.$bigger-mobile) {
+    height: 500px;
+  }
+
+  @media (min-width: var.$tablet) {
+    height: 660px;
+  }
+}

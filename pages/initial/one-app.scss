@@ -1,4 +1,5 @@
-@use "styles/variables" as v;
+@use "styles/variables" as var;
+@use "mixins" as localMixins;
 
 .one-app {
   $double-gap: calc(var(--gap) * 2);
@@ -7,26 +8,16 @@
   position: relative;
 
   &__animation {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-image: url("assets/images/initial/one-app-bubble.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    overflow: clip;
-    z-index: -1;
-
-    animation: bg-rotation 100s linear infinite both;
+    @include localMixins.bg-rotation(
+      $image: "assets/images/initial/one-app-bubble.png"
+    );
   }
 
   &__container {
     display: flex;
     flex-direction: column;
 
-    @media (min-width: v.$bigger-tablet) {
+    @media (min-width: var.$bigger-tablet) {
       flex-direction: row;
     }
   }
@@ -35,7 +26,7 @@
   &__left {
     flex: none;
 
-    @media (min-width: v.$bigger-tablet) {
+    @media (min-width: var.$bigger-tablet) {
       flex: 1;
     }
   }
@@ -50,25 +41,15 @@
       align-self: flex-start;
     }
 
-    @media (min-width: v.$bigger-tablet) {
+    @media (min-width: var.$bigger-tablet) {
       margin-bottom: 0;
     }
   }
 
   &__rigth {
-    height: 660px;
-    background-image: url("assets/images/initial/one-app-background.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    @media (min-width: v.$bigger-mobile) {
-      height: 500px;
-    }
-
-    @media (min-width: v.$tablet) {
-      height: 660px;
-    }
+    @include localMixins.half-container-image(
+      "assets/images/initial/one-app-background.png"
+    );
   }
 
   &__buttons {
@@ -90,7 +71,7 @@
       left: 20px;
       padding: 0 20px;
 
-      @media (min-width: v.$bigger-tablet) {
+      @media (min-width: var.$bigger-tablet) {
         left: 30px;
       }
     }
@@ -100,7 +81,7 @@
     display: none;
   }
 
-  @media (min-width: v.$bigger-tablet) {
+  @media (min-width: var.$bigger-tablet) {
     br {
       display: block;
     }
