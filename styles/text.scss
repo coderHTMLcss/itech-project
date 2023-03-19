@@ -3,6 +3,14 @@
     font-weight: 700;
   }
 
+  &_smallest {
+    font: var(--smallest-font);
+  }
+
+  &_smaller {
+    font: var(--smaller-font);
+  }
+
   &_biggest {
     font: var(--biggest-font);
   }
