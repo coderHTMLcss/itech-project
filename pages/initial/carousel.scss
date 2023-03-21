@@ -1,0 +1,12 @@
+@use "styles/variables" as var;
+@use "styles/mixins" as mixins;
+@use "mixins" as localMixins;
+
+.carousel {
+  width: 100%;
+  background-color: var(--color-grey);
+
+  .features__wave {
+    transform: rotate(180deg);
+  }
+}

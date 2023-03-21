@@ -1,0 +1,62 @@
+@use "styles/variables" as var;
+@use "styles/mixins" as mixins;
+@use "mixins" as localMixins;
+
+.integration {
+  position: relative;
+  width: 100%;
+  margin-top: var(--gap);
+  @include mixins.background-image(
+    "assets/images/initial/integration-background.png"
+  );
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap);
+    margin: 0 auto;
+  }
+
+  &__icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    div {
+      animation: slide-up-down 1.7s ease-in-out infinite alternate both;
+
+      &:nth-child(2) {
+        animation-delay: 0.5s;
+      }
+
+      &:nth-child(3) {
+        animation-delay: 1s;
+      }
+
+      &:nth-child(4) {
+        animation-delay: 1.5s;
+      }
+
+      &:nth-child(5) {
+        animation-delay: 2s;
+      }
+    }
+  }
+
+  &__description {
+    line-height: 30px;
+  }
+
+  br {
+    display: none;
+
+    @media (min-width: var.$bigger-tablet) {
+      display: block;
+    }
+
+    @media (min-width: var.$desktop) {
+      display: none;
+    }
+  }
+}

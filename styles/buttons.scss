@@ -110,3 +110,41 @@
     }
   }
 }
+
+.button-dropdown {
+  width: 280px;
+  padding: var(--gap);
+  border-radius: 6px;
+
+  @media (min-width: var.$bigger-mobile) {
+    width: 369px;
+  }
+
+  @media (min-width: var.$bigger-tablet) {
+    width: 469px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--gap);
+  }
+
+  &__bottom {
+    display: none;
+  }
+
+  &_active {
+    .button-dropdown__bottom {
+      display: block;
+      text-align: start;
+      margin-top: var(--gap);
+      color: var(--black-color);
+    }
+    color: var(--violett-color);
+    background-color: var(--creame-color);
+    svg {
+      transform: scaleY(-1);
+    }
+  }
+}
