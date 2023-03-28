@@ -12,7 +12,7 @@
   font: var(--smallest-font);
   color: var(--color-white);
 
-  .container {
+  &__container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,8 +31,29 @@
   }
 }
 
+.header_fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-radius: 0;
+
+  z-index: 999;
+}
+
+.header_sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-radius: 0;
+
+  z-index: 999;
+}
+
 header {
   --top-radius: 30px;
+
   padding: var(--gap) 0;
   background-color: var(--color-white);
   border-top-right-radius: var(--top-radius);
